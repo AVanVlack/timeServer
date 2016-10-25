@@ -1,9 +1,6 @@
 let express = require('express'),
-    morgan = require('morgan'),
     path = require('path'),
     app = express();
-
-app.use(morgan('dev'));
 
 
 //Date from unix route
