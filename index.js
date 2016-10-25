@@ -2,6 +2,8 @@ let express = require('express'),
     path = require('path'),
     app = express();
 
+let port = process.env.PORT || 8080;
+
 
 //Date from unix route
 app.get('/:date(\\d+)/', (req, res) => {
@@ -22,7 +24,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-app.listen(3000, function () {
+app.listen(port, function () {
   console.log('Example app listening on port 3000!');
 });
 
